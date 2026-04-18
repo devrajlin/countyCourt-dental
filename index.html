@@ -787,6 +787,54 @@
       .contact-holographic-glow-text {
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
       }
+      /* faq css */
+       /* Final Butter-Smooth Accordion Logic */
+        .final-faq-item {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+        }
+        .final-faq-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .final-faq-item.active {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .final-faq-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+        }
+
+        .final-faq-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .final-faq-item.active .final-faq-content {
+            grid-template-rows: 1fr;
+        }
+
+        .final-faq-inner {
+            min-height: 0;
+        }
+
+        .final-faq-icon {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .final-faq-item.active .final-faq-icon {
+            transform: rotate(180deg);
+        }
     </style>
   </head>
   <body
@@ -1598,8 +1646,8 @@
             <div class="flex items-center gap-4">
               <span class="w-2 h-2 rounded-full bg-primary"></span>
               <span class="text-slate-700 font-semibold"
-                >Fellow of the International Congress of Oral
-                Implantologists</span
+                >Dedicated to Exceptional Dentistry and Lifelong Patient
+                Care</span
               >
             </div>
             <div class="flex items-center gap-4">
@@ -2624,7 +2672,7 @@
         <h2
           class="font-headline text-5xl font-bold tracking-tighter mb-4 text-sky-900"
         >
-          The Visual Metamorphosis
+          The Art Of Alignment
         </h2>
         <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
       </div>
@@ -3463,27 +3511,29 @@
       </div>
     </section>
     <!-- faq section -->
-    <section class="bg-container-low py-4">
-      <div class="max-w-6xl mx-auto mb-10 px-8 relative">
+    <section class="bg-primary py-4">
+      <div class="max-w-7xl mx-auto px-8 relative mb-10">
         <!-- Header Section -->
-        <div class="mb-16">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-px w-12 bg-[#0F75BC]"></div>
+        <div class="mb-8">
+          <div class="flex items-center gap-3 mb-2 mt-8">
+            <div class="h-px w-12 bg-white/40"></div>
             <span
-              class="uppercase tracking-widest text-xs font-bold text-[#0F75BC]"
-              >FAQ Portal</span
+              class="uppercase tracking-widest text-xs font-bold text-white/70"
+              >FAQ PORTAL</span
             >
           </div>
           <h1
-            class="text-5xl md:text-7xl font-headline font-extrabold text-[#002E4D] tracking-tighter mb-6 leading-none"
+            class="text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter mb-2 leading-none"
           >
-           Frequently Asked <br>
+           Frequently Asked 
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#0F75BC] to-[#00497A]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60"
               >Questions</span
             >
           </h1>
-          <p class="text-lg text-[#404751] max-w-2xl leading-relaxed">
+          <p
+            class="text-md text-white/80 max-w-2xl leading-relaxed font-body"
+          >
             Deciphering the science of modern dentistry. Explore our technical
             archives for common inquiries regarding your journey to a restored
             smile.
@@ -3494,296 +3544,262 @@
           <!-- Sidebar Info Panel -->
           <div class="lg:col-span-4 space-y-6">
             <div
-              class="glass-card p-8 rounded-xl relative group border-t-4 border-t-[#0F75BC]"
+              class="final-faq-item p-8 rounded-xl relative group border-t-4 border-t-white/30"
             >
-              <div class="absolute top-4 right-4 opacity-10 text-[#0F75BC]">
+              <div class="absolute top-4 right-4 opacity-10 text-white">
                 <span class="material-symbols-outlined text-4xl"
                   >clinical_notes</span
                 >
               </div>
-              <h3 class="text-xl font-headline font-bold text-[#002E4D] mb-4">
-              Accessibility
+              <h3 class="text-xl font-headline font-bold text-white mb-4">
+                Accessibility
               </h3>
-              <div class="space-y-4 text-sm text-[#404751]">
+              <div class="space-y-4 text-sm text-white/90">
                 <div
-                  class="flex justify-between items-center pb-2 border-b border-outline-variant/30"
+                  class="flex justify-between items-center pb-2 border-b border-white/10"
                 >
                   <span class="font-medium">Support Response</span>
-                  <span class="text-[#0F75BC] font-semibold">Active / 24m</span>
+                  <span class="text-white font-bold">Active / 24m</span>
                 </div>
                 <div
-                  class="flex justify-between items-center pb-2 border-b border-outline-variant/30"
+                  class="flex justify-between items-center pb-2 border-b border-white/10"
                 >
                   <span class="font-medium">Emergency Portal</span>
-                  <span class="text-[#0F75BC] font-semibold">Standby</span>
+                  <span class="text-white font-bold">Standby</span>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="font-medium">Digital Imaging</span>
-                  <span class="text-[#0F75BC] font-semibold"
-                    >Precision Core</span
-                  >
+                  <span class="text-white font-bold">Precision Core</span>
                 </div>
               </div>
             </div>
             <div
-              class="relative rounded-xl overflow-hidden aspect-video group shadow-xl"
+              class="relative rounded-xl overflow-hidden aspect-video group shadow-2xl"
             >
               <img
-                alt="Interior of a modern high-tech dental surgery room with sapphire blue ambient lighting and robotic dental equipment"
+                alt="Interior of a modern high-tech dental surgery room"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="images/faq.avif"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Yn9JZG6-usG9OcuoPDtmfepaR0k45Tzv0td_Jc7hY1flue3zZPkqERNJGjiQ5wVFvl75NuMdjIVkp3USRPN9lsrO5psjHMNL6lOCIlH5FJGiojQe7yR7L73aEPN7XEKeHipfjm580cGt1SVJijRsqCIqdxn5dXR7fxZ0qjoJ26fK2BP5_du2sswoftCjz_AQ3GlIr1pzb0eJRAbsZpfq3n8VUp-6UedscCQqChAA0oeOZ-gEMO_qrPB2l2oRch8qpfwFnN7-xHej"
               />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-[#002E4D]/60 via-transparent to-transparent"
+                class="absolute inset-0 bg-gradient-to-t from-[#002E4D]/80 via-transparent to-transparent"
               ></div>
               <div class="absolute bottom-4 left-4">
                 <span
                   class="text-xs font-bold text-white uppercase tracking-tighter flex items-center gap-2"
                 >
                   <span
-                    class="w-2 h-2 rounded-full bg-error animate-pulse"
+                    class="w-2 h-2 rounded-full bg-red-400 animate-pulse"
                   ></span>
-                  Emergency Support 24/7
+                 24/7 Support
                 </span>
               </div>
             </div>
           </div>
           <!-- Main FAQ Stream -->
-          <div class="lg:col-span-8 space-y-4">
+          <div class="lg:col-span-8 space-y-4" id="faq-root">
             <!-- Accordion Item 1 -->
-            <div
-              class="glass-card rounded-xl transition-all duration-500 overflow-hidden group"
-            >
-              <details class="group" name="faq-accordion">
-                <summary
-                  class="flex items-center justify-between p-6 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-[#0F75BC] font-headline font-bold opacity-30"
-                      >01</span
-                    >
-                    <h3
-                      class="text-lg font-headline font-bold text-[#002E4D] group-hover:text-[#0F75BC] transition-colors"
-                    >
-                      How long do dental implants typically last?
-                    </h3>
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-[#0F75BC] transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
+            <div class="final-faq-item rounded-xl">
+              <div class="final-faq-header">
+                <div class="flex items-center gap-4">
+                  <span class="text-white font-headline font-bold opacity-40"
+                    >01</span
                   >
-                </summary>
-                <div
-                  class="px-6 pb-6 pt-2 text-[#404751] leading-relaxed text-sm"
-                >
-                  <p class="mb-3">
-                    With advanced placement techniques and meticulous patient
-                    care, dental implants are engineered for longevity. While
-                    the crown may require replacement after 10-15 years due to
-                    normal wear, the titanium post integrated into the jawbone
-                    is designed to be a permanent structural solution.
-                  </p>
-                  <p>
-                    Regular diagnostic checks and hygiene sanctuary visits
-                    ensure the integrity of the integrated implant architecture.
-                  </p>
+                  <h3 class="text-lg font-headline font-bold text-white">
+                    How long do dental implants typically last?
+                  </h3>
                 </div>
-              </details>
+                <span
+                  class="material-symbols-outlined text-white final-faq-icon"
+                  >expand_more</span
+                >
+              </div>
+              <div class="final-faq-content">
+                <div class="final-faq-inner">
+                  <div class="px-6 pb-6 text-white/90 leading-relaxed text-sm">
+                    <p class="mb-3">
+                      With advanced placement techniques and meticulous patient
+                      care, dental implants are engineered for longevity. While
+                      the crown may require replacement after 10-15 years due to
+                      normal wear, the titanium post integrated into the jawbone
+                      is designed to be a permanent structural solution.
+                    </p>
+                    <p>
+                      Regular diagnostic checks and hygiene sanctuary visits
+                      ensure the integrity of the integrated implant
+                      architecture.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Accordion Item 2 -->
-            <div
-              class="glass-card rounded-xl transition-all duration-500 overflow-hidden group"
-            >
-              <details class="group" name="faq-accordion">
-                <summary
-                  class="flex items-center justify-between p-6 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-[#0F75BC] font-headline font-bold opacity-30"
-                      >02</span
-                    >
-                    <h3
-                      class="text-lg font-headline font-bold text-[#002E4D] group-hover:text-[#0F75BC] transition-colors"
-                    >
-                      Does laser tooth whitening cause sensitivity?
-                    </h3>
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-[#0F75BC] transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
+            <div class="final-faq-item rounded-xl">
+              <div class="final-faq-header">
+                <div class="flex items-center gap-4">
+                  <span class="text-white font-headline font-bold opacity-40"
+                    >02</span
                   >
-                </summary>
-                <div
-                  class="px-6 pb-6 pt-2 text-[#404751] leading-relaxed text-sm"
-                >
-                  <p>
-                    Our Clinical Sanctuary utilizes pH-balanced whitening gels
-                    and precision laser calibration to minimize nerve
-                    excitation. Most patients report zero to negligible
-                    sensitivity compared to traditional abrasive methods.
-                  </p>
+                  <h3 class="text-lg font-headline font-bold text-white">
+                    Is the implant procedure painful?
+                  </h3>
                 </div>
-              </details>
+                <span
+                  class="material-symbols-outlined text-white final-faq-icon"
+                  >expand_more</span
+                >
+              </div>
+              <div class="final-faq-content">
+                <div class="final-faq-inner">
+                  <div class="px-6 pb-6 text-white/90 leading-relaxed text-sm">
+                    <p class="mb-3">
+                      Patient comfort is our primary directive. Most patients
+                      report minimal discomfort, often comparable to a routine
+                      extraction. We utilize advanced local anesthesia and offer
+                      sedation options for a completely relaxed experience.
+                    </p>
+                    <p>
+                      Post-operative recovery is usually swift, managed with
+                      standard over-the-counter protocols.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Accordion Item 3 -->
-            <div
-              class="glass-card rounded-xl transition-all duration-500 overflow-hidden group"
-            >
-              <details class="group" name="faq-accordion" open="">
-                <summary
-                  class="flex items-center justify-between p-6 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-[#0F75BC] font-headline font-bold opacity-30"
-                      >03</span
-                    >
-                    <h3
-                      class="text-lg font-headline font-bold text-[#002E4D] group-hover:text-[#0F75BC] transition-colors"
-                    >
-                      How do I handle a dental emergency after hours?
-                    </h3>
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-[#0F75BC] transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
+            <div class="final-faq-item rounded-xl">
+              <div class="final-faq-header">
+                <div class="flex items-center gap-4">
+                  <span class="text-white font-headline font-bold opacity-40"
+                    >03</span
                   >
-                </summary>
-                <div
-                  class="px-6 pb-6 pt-2 text-[#404751] leading-relaxed text-sm"
+                  <h3 class="text-lg font-headline font-bold text-white">
+                    What is Digital Smile Design?
+                  </h3>
+                </div>
+                <span
+                  class="material-symbols-outlined text-white final-faq-icon"
+                  >expand_more</span
                 >
-                  <div
-                    class="flex items-start gap-4 p-4 bg-primary-container/10 rounded-lg border border-primary-container/20 mb-4"
-                  >
-                    <span
-                      class="material-symbols-outlined text-error"
-                      data-weight="fill"
-                      >emergency</span
-                    >
-                    <div>
-                      <p class="font-bold text-[#002E4D] mb-1">
-                        Priority Protocol Active
-                      </p>
-                      <p>
-                        Call our main line and follow the 'Technical Emergency'
-                        prompt. A specialist triage coordinator will be alerted
-                        immediately.
-                      </p>
-                    </div>
+              </div>
+              <div class="final-faq-content">
+                <div class="final-faq-inner">
+                  <div class="px-6 pb-6 text-white/90 leading-relaxed text-sm">
+                    <p class="mb-3">
+                      Digital Smile Design (DSD) is a technical planning tool
+                      that allows us to architect your new smile digitally
+                      before we begin. We use 3D scans and facial analysis to
+                      ensure the final result is perfectly harmonious with your
+                      features.
+                    </p>
+                    <p>
+                      This blueprint allows for unparalleled precision and lets
+                      you preview your transformation beforehand.
+                    </p>
                   </div>
                 </div>
-              </details>
+              </div>
             </div>
             <!-- Accordion Item 4 -->
-            <div
-              class="glass-card rounded-xl transition-all duration-500 overflow-hidden group"
-            >
-              <details class="group" name="faq-accordion">
-                <summary
-                  class="flex items-center justify-between p-6 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-[#0F75BC] font-headline font-bold opacity-30"
-                      >04</span
-                    >
-                    <h3
-                      class="text-lg font-headline font-bold text-[#002E4D] group-hover:text-[#0F75BC] transition-colors"
-                    >
-                      Are clear aligners faster than traditional braces?
-                    </h3>
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-[#0F75BC] transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
+            <div class="final-faq-item rounded-xl active">
+              <div class="final-faq-header">
+                <div class="flex items-center gap-4">
+                  <span class="text-white font-headline font-bold opacity-40"
+                    >04</span
                   >
-                </summary>
-                <div
-                  class="px-6 pb-6 pt-2 text-[#404751] leading-relaxed text-sm"
-                >
-                  <p>
-                    Treatment velocity depends on individual scan results.
-                    However, our digital mapping allows for more predictable
-                    micro-adjustments, often reducing total treatment time by
-                    20-30% compared to legacy wire systems.
-                  </p>
+                  <h3 class="text-lg font-headline font-bold text-white">
+                    How do I maintain my restoration?
+                  </h3>
                 </div>
-              </details>
+                <span
+                  class="material-symbols-outlined text-white final-faq-icon"
+                  >expand_more</span
+                >
+              </div>
+              <div class="final-faq-content">
+                <div class="final-faq-inner">
+                  <div class="px-6 pb-6 text-white/90 leading-relaxed text-sm">
+                    <p class="mb-3">
+                      Maintenance follows the same principles as natural
+                      dentition: meticulous brushing, flossing, and professional
+                      cleanings. However, we may recommend specific technical
+                      tools like interdental brushes or water flossers.
+                    </p>
+                    <p>
+                      Biannual system audits at our sanctuary ensure the
+                      long-term stability of your restorative components.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Accordion Item 5 -->
-            <div
-              class="glass-card rounded-xl transition-all duration-500 overflow-hidden group"
-            >
-              <details class="group" name="faq-accordion">
-                <summary
-                  class="flex items-center justify-between p-6 cursor-pointer list-none"
-                >
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-[#0F75BC] font-headline font-bold opacity-30"
-                      >05</span
-                    >
-                    <h3
-                      class="text-lg font-headline font-bold text-[#002E4D] group-hover:text-[#0F75BC] transition-colors"
-                    >
-                      What sedation options do you offer for anxiety?
-                    </h3>
-                  </div>
-                  <span
-                    class="material-symbols-outlined text-[#0F75BC] transition-transform duration-300 group-open:rotate-180"
-                    >expand_more</span
+            <div class="final-faq-item rounded-xl">
+              <div class="final-faq-header">
+                <div class="flex items-center gap-4">
+                  <span class="text-white font-headline font-bold opacity-40"
+                    >05</span
                   >
-                </summary>
-                <div
-                  class="px-6 pb-6 pt-2 text-[#404751] leading-relaxed text-sm"
-                >
-                  <p>
-                    We offer a tiered sanctuary approach: from 'Cloud IV
-                    Sedation' for deep relaxation to conscious sedation
-                    protocols. All procedures are monitored by our precision
-                    vitals array for absolute safety.
-                  </p>
+                  <h3 class="text-lg font-headline font-bold text-white">
+                    Do you offer emergency technical support?
+                  </h3>
                 </div>
-              </details>
+                <span
+                  class="material-symbols-outlined text-white final-faq-icon"
+                  >expand_more</span
+                >
+              </div>
+              <div class="final-faq-content">
+                <div class="final-faq-inner">
+                  <div class="px-6 pb-6 text-white/90 leading-relaxed text-sm">
+                    <p class="mb-3">
+                      Yes, we prioritize structural failures or acute pain with
+                      same-day emergency triage. Our clinical team remains on
+                      standby to address urgent requirements and restore system
+                      integrity immediately.
+                    </p>
+                    <p>
+                      Please contact our direct link for priority scheduling
+                      during such events.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    
+       
       </div>
     </section>
     <!-- contact section -->
-    <section class="bg-primary-container py-14">
+    <section class="bg-white py-8">
       <div class="max-w-6xl mx-auto relative z-10">
-        <!-- Header Section: Centered -->
-        <div class="text-center mb-8 max-w-3xl mx-auto">
+        <!-- Header Section: Centered above the card -->
+        <div class="text-center mb-6 max-w-3xl mx-auto">
           <div
-            class="mb-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase backdrop-blur-md"
+            class="mb-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#0F75BC] text-xs font-bold tracking-widest uppercase"
           >
             <span class="material-symbols-outlined text-sm" data-icon="hub"
-              >Dentistry</span
+              >call</span
             >
-            County Court Dentistry
+            Contact Us
           </div>
           <h1
-            class="font-headline font-extrabold text-5xl lg:text-7xl text-white tracking-tighter leading-none mb-5"
+            class="font-headline font-extrabold text-5xl lg:text-6xl text-slate-900 tracking-tighter leading-tight mb-2"
           >
-            Book Your Appointment
+            Book Your <span class="text-[#0F75BC]">Appointment.</span>
           </h1>
-          <p class="text-blue-50 text-xl font-light leading-relaxed opacity-90">
+          <p class="text-slate-600 text-lg font-light leading-relaxed">
             Step into a new era of dental precision. Your journey toward a
             transformative aesthetic begins with a single digital handshake.
           </p>
         </div>
         <!-- Enhanced Contact Card -->
         <div
-          class="contact-holographic-glass rounded-[2rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-2xl border border-white/30"  data-aos="zoom-in"
+          class="bg-white rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-[0_32px_64px_-16px_rgba(15,117,188,0.15)] border border-slate-100"
         >
-          <!-- Left: Form -->
-          <div
-            class="p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/10"
-          >
+          <!-- Left: Form Panel (Primary Blue) -->
+          <div class="p-8 lg:p-12 bg-[#0F75BC] text-white">
             <form class="space-y-6">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Name -->
@@ -3793,7 +3809,7 @@
                     >Name</label
                   >
                   <input
-                    class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:border-white transition-all"
+                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-100/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
                     placeholder="Johnathan Doe"
                     type="text"
                   />
@@ -3805,7 +3821,7 @@
                     >Email Address</label
                   >
                   <input
-                    class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:border-white transition-all"
+                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-100/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
                     placeholder="j.doe@architect.com"
                     type="email"
                   />
@@ -3819,52 +3835,64 @@
                     >Phone No</label
                   >
                   <input
-                    class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:border-white transition-all"
-                    placeholder="+1 7700 900000"
+                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-100/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
+                    placeholder="+44 7700 900000"
                     type="tel"
                   />
                 </div>
                 <!-- Services -->
-                <div class="space-y-2 relative">
+                <div class="space-y-2">
                   <label
                     class="block text-xs font-bold text-blue-100 uppercase tracking-widest ml-1"
                     >Services Type</label
                   >
-                  <select
-                    class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white appearance-none focus:outline-none focus:border-white transition-all cursor-pointer"
-                  >
-                    <option class="bg-[#0F75BC]">Cosmetic Dentistry</option>
-                    <option class="bg-[#0F75BC]">Invisalign® Treatment</option>
-                    <option class="bg-[#0F75BC]">Dental Implants</option>
-                    <option class="bg-[#0F75BC]">General Consultation</option>
-                  </select>
-                  <span
-                    class="material-symbols-outlined absolute right-4 top-[2.75rem] text-white/50 pointer-events-none"
-                    data-icon="expand_more"
-                    >expand_more</span
-                  >
+                  <div class="relative">
+                    <select
+                      class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all cursor-pointer"
+                    >
+                      <option class="text-slate-900">Cosmetic Dentistry</option>
+                      <option class="text-slate-900">
+                        Invisalign® Treatment
+                      </option>
+                      <option class="text-slate-900">Dental Implants</option>
+                      <option class="text-slate-900">
+                        General Consultation
+                      </option>
+                    </select>
+                    <span
+                      class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none"
+                      data-icon="expand_more"
+                      >expand_more</span
+                    >
+                  </div>
                 </div>
               </div>
               <!-- Preferred Time -->
-              <div class="space-y-2 relative">
+              <div class="space-y-2">
                 <label
                   class="block text-xs font-bold text-blue-100 uppercase tracking-widest ml-1"
                   >Preferred Time</label
                 >
-                <select
-                  class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white appearance-none focus:outline-none focus:border-white transition-all cursor-pointer"
-                >
-                  <option class="bg-[#0F75BC]">Morning (08:00 - 12:00)</option>
-                  <option class="bg-[#0F75BC]">
-                    Afternoon (12:00 - 17:00)
-                  </option>
-                  <option class="bg-[#0F75BC]">Evening (17:00 - 20:00)</option>
-                </select>
-                <span
-                  class="material-symbols-outlined absolute right-4 top-[2.75rem] text-white/50 pointer-events-none"
-                  data-icon="expand_more"
-                  >expand_more</span
-                >
+                <div class="relative">
+                  <select
+                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all cursor-pointer"
+                  >
+                    <option class="text-slate-900">
+                      Morning (08:00 - 12:00)
+                    </option>
+                    <option class="text-slate-900">
+                      Afternoon (12:00 - 17:00)
+                    </option>
+                    <option class="text-slate-900">
+                      Evening (17:00 - 20:00)
+                    </option>
+                  </select>
+                  <span
+                    class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none"
+                    data-icon="expand_more"
+                    >expand_more</span
+                  >
+                </div>
               </div>
               <!-- Message -->
               <div class="space-y-2">
@@ -3873,20 +3901,20 @@
                   >Message</label
                 >
                 <textarea
-                  class="contact-holographic-input w-full bg-white/5 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:border-white transition-all resize-none"
+                  class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder:text-blue-100/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all resize-none"
                   placeholder="How can we help you achieve your dream smile?"
-                  rows="4"
+                  rows="3"
                 ></textarea>
               </div>
               <!-- Submit Button -->
               <button
-                class="w-full relative group overflow-hidden bg-white text-[#0F75BC] py-5 rounded-xl font-headline font-bold text-lg tracking-tight transition-all active:scale-[0.98] shadow-xl hover:shadow-white/20"
+                class="w-full relative group overflow-hidden bg-white text-[#0F75BC] py-5 rounded-xl font-headline font-bold text-lg tracking-tight transition-all hover:bg-blue-50 active:scale-[0.98] shadow-lg shadow-black/10"
                 type="submit"
               >
                 <span
                   class="relative z-10 flex items-center justify-center gap-2"
                 >
-                  Send
+                  Submit Request
                   <span class="material-symbols-outlined" data-icon="send"
                     >send</span
                   >
@@ -3894,40 +3922,17 @@
               </button>
             </form>
           </div>
-          <!-- Right: Visual -->
+          <!-- Right: Visual Panel (Image) -->
           <div class="relative min-h-[400px] lg:min-h-full">
             <img
               alt="Professional dentist interacting with a happy smiling client in a high-tech clinic"
-              class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
+              class="absolute inset-0 w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS0_4mC7gSsNm9wt2vHluS4l4lZRH2fxa96L5wti5uyzjEtG5AI5pO3tBc1v5hyTSAE0Gj42eRn1uxHtu6YZN7pIRvfxJib3PfYw6wNGB14rtlwuQLcmsGD6REJuPLNNXyBt1Gl4LosNU1chAbGea9ICKD9x3NyljYdjoHnDvtUEmS3_SAZNNuP4Pioih4Ej3HnSBqTNPOVRSuCVqrWQf9lQkiJxxkY7i103qnzUOl-ITYHNUiJZHKlCXEDqPSjFyHi_Hz6UBws3KY"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-r from-[#0F75BC]/40 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
             ></div>
-            <!-- Stats Overlay -->
-            <!-- <div
-              class="absolute bottom-8 left-8 right-8 p-6 contact-holographic-glass rounded-2xl border-white/20"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-xl"
-                >
-                  <span
-                    class="material-symbols-outlined text-white"
-                    data-icon="star"
-                    >star</span
-                  >
-                </div>
-                <div>
-                  <p class="text-white font-bold text-lg leading-tight">
-                    Patient Satisfaction
-                  </p>
-                  <p class="text-blue-50 text-sm opacity-80">
-                    99.8% Approval across 5,000+ blueprints
-                  </p>
-                </div>
-              </div>
-            </div> -->
+           
           </div>
         </div>
       </div>
@@ -4541,6 +4546,35 @@
           dot.addEventListener("mouseenter", pauseAutoPlay),
         );
       })();
+      // faq js
+      document.addEventListener('DOMContentLoaded', () => {
+        const faqRoot = document.getElementById('faq-root');
+        if (!faqRoot) return;
+
+        const items = faqRoot.querySelectorAll('.final-faq-item');
+
+        items.forEach(item => {
+            const header = item.querySelector('.final-faq-header');
+            
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items instantly
+                items.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+    });
     </script>
   </body>
 </html>
